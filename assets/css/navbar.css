@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f9f0; /* Light green background */
+    color: #333;
+}
+
+/* Navigation Bar */
+.nav_bar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #228B22; /* Green */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_bar_container .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navigation ul li {
+    position: relative;
+}
+
+.navigation ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #006400; /* Darker Green */
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2E8B57; /* Darker Green */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background-color: #006400; /* Darker Green */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Menu Toggle */
+.nav_toggle {
+    display: none;
+}
+
+.toggle_button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background-color: #228B22;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .navigation ul.active {
+        display: flex;
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+
+    .navigation ul li {
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+    
+    .dropdown-content.show {
+        display: block;
+    }
+}
+
+/* Event Section (Optional) */
+section.events {
+    padding: 20px;
+    background-color: #eaf4ea; /* Light green background */
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #228B22; /* Green */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
